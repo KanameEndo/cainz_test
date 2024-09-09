@@ -1,0 +1,124 @@
+/* ピンクの塗りが足りなかったのを解消　ここから */
+.benefits2024_coupon_code_card {
+  text-align: center;
+  border-top: dashed 2px #E7211A;
+}
+
+.benefits2024_coupon_code_image {
+  background-color: white;
+}
+
+.benefits2024_coupon_code_image a {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.benefits2024_coupon_code_image img {
+  display: block;
+  width: 320px;
+  height: auto;
+}
+
+.benefits2024_coupon_code_container {
+  background-color: #FFF3F3;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+
+.benefits2024_coupon_code_card {
+  margin-right: 16px;
+  border: solid 6px #E7211A;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.benefits2024_coupon_code_container {
+  background-color: #FFF3F3;
+  border-top: dashed 2px #E7211A;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ピンクの塗りが足りなかったのを解消　ここまで */
+
+
+
+/* タブ切り替え4つバージョン */
+.benefits_tabs {
+  display: flex;
+  width: 100%;
+}
+
+.benefits_tabs label {
+  width: 25%; /* 4つにするために幅を25%に変更 */
+  background-color: #D9D4C8;
+  margin: 0 16px 16px 0;
+  border-radius: 32px;
+  padding: 8px;
+  color: #AFA896;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 130%;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.benefits_tabs label:last-child {
+  margin-right: 0;
+}
+
+#benefits_tab_04:checked ~ .benefits_tabs .benefits_tab_04 {
+  background-color: #ED7D7C;
+  color: #fff;
+}
+#benefits_tab_01:checked ~ .benefits_tabs .benefits_tab_01 {
+  background-color: #ED7D7C;
+  color: #fff;
+}
+#benefits_tab_02:checked ~ .benefits_tabs .benefits_tab_02 {
+  background-color: #ED7D7C;
+  color: #fff;
+}
+#benefits_tab_03:checked ~ .benefits_tabs .benefits_tab_03 {
+  background-color: #ED7D7C;
+  color: #fff;
+}
+
+.benefits_content_04 {
+  display: none;
+}
+.benefits_content_01 {
+  display: none;
+}
+.benefits_content_02 {
+  display: none;
+}
+.benefits_content_03 {
+  display: none;
+}
+
+#benefits_tab_04:checked ~ .benefits_contents_step3 .benefits_content_04 {
+  display: block;
+}
+#benefits_tab_01:checked ~ .benefits_contents_step3 .benefits_content_01 {
+  display: block;
+}
+#benefits_tab_02:checked ~ .benefits_contents_step3 .benefits_content_02 {
+  display: block;
+}
+#benefits_tab_03:checked ~ .benefits_contents_step3 .benefits_content_03 {
+  display: block;
+}
+/* タブ切り替え4つバージョンここまで */
