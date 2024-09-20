@@ -54,13 +54,13 @@
 
 
 /* タブ切り替え4つバージョン */
-.benefits_tabs {
+.benefits_tabs_container {
   display: flex;
   width: 100%;
 }
 
-.benefits_tabs label {
-  width: 25%; /* 4つにするために幅を25%に変更 */
+.benefits_tabs_container label {
+  width: 25%;
   background-color: #D9D4C8;
   margin: 0 16px 16px 0;
   border-radius: 32px;
@@ -75,50 +75,760 @@
   justify-content: center;
 }
 
-.benefits_tabs label:last-child {
+.benefits_tabs_container label:last-child {
   margin-right: 0;
 }
 
-#benefits_tab_04:checked ~ .benefits_tabs .benefits_tab_04 {
-  background-color: #ED7D7C;
-  color: #fff;
-}
-#benefits_tab_01:checked ~ .benefits_tabs .benefits_tab_01 {
-  background-color: #ED7D7C;
-  color: #fff;
-}
-#benefits_tab_02:checked ~ .benefits_tabs .benefits_tab_02 {
-  background-color: #ED7D7C;
-  color: #fff;
-}
-#benefits_tab_03:checked ~ .benefits_tabs .benefits_tab_03 {
+/* アクティブタブのスタイル（JavaScriptで動的に追加） */
+.benefits_tabs label.active-tab {
   background-color: #ED7D7C;
   color: #fff;
 }
 
-.benefits_content_04 {
-  display: none;
+
+.benefits_tabs label:last-of-type {
+  margin-right: 0;
 }
-.benefits_content_01 {
-  display: none;
-}
-.benefits_content_02 {
-  display: none;
-}
-.benefits_content_03 {
+
+.benefits_contents_step3 > div {
   display: none;
 }
 
-#benefits_tab_04:checked ~ .benefits_contents_step3 .benefits_content_04 {
-  display: block;
-}
-#benefits_tab_01:checked ~ .benefits_contents_step3 .benefits_content_01 {
-  display: block;
-}
-#benefits_tab_02:checked ~ .benefits_contents_step3 .benefits_content_02 {
-  display: block;
-}
-#benefits_tab_03:checked ~ .benefits_contents_step3 .benefits_content_03 {
-  display: block;
-}
 /* タブ切り替え4つバージョンここまで */
+
+
+/* カインズ用のテキスト */
+.cainz-text {
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: left;
+}
+
+.cainz-text-attention {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+/* カインズ用パソコン幅 */
+.pc-cainz-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* カインズ用パソコンギャップ */
+.pc-cainz-container-gap {
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.cainz-image {
+  max-width: 100%;
+}
+.image-bottom-pc-yohaku {
+  margin: 1rem 0;
+}
+
+.h3-cainz-m-top {
+  margin: 1rem 0 0.25rem;
+}
+
+/* カインズ見出し2 */
+.h2-cainz {
+  font-weight: bold;
+  color: #266646;
+  font-size: 24px;
+  text-align: center;
+  line-height: 160%;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border: 2px solid #327454;
+  border-left: none;
+  border-right: none;
+}
+
+/* カインズスターターセットの内容 */
+.cainz-starterset-contents {
+  width: 100%;
+  padding: 24px;
+  background: #F2F5F3;
+  box-shadow: 0px 0px 4.5px rgba(50, 116, 84, 0.25);
+  border-radius: 24px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+  box-sizing: border-box;
+}
+.starterset-h3 {
+  align-self: stretch;
+  text-align: center;
+  color: #327454;
+  font-size: 24px;
+  font-weight: 600;
+}
+.cainz-starterset-contents-productname {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.cainz-starterset-contents-container {
+  font-size: 16px;
+  text-align: left;
+  line-height: 160%;
+}
+
+.cainz-starterset-contents-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.cainz-starterset-contents-container li {
+  margin-bottom: 8px;
+}
+
+/* カインズ番号連携の注意事項 */
+.cainz-attention {
+  width: 100%;
+  padding: 2rem;
+  background: #FEFFE4;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.cainz-attention-container {
+  align-self: stretch;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.cainz-icon-attention {
+  width: 52px;
+}
+
+.cainz-icon-attention-text-red {
+  flex: 1 1 0;
+  color: #E30000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 160%;
+  text-align: left;
+}
+
+.cainz-attention-text {
+  text-align: left;
+  font-size: 12px;
+  line-height: 160%;
+}
+
+.cainz-attention-text-bold {
+  font-weight: bold;
+}
+
+/* カインズポイントのプレゼントについて */
+.cainz-points-gift-sc {
+  /* display: flex;
+  flex-direction: column; */
+  height: 180px;
+  padding: 32px; /* 左のパディングを27pxに */
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 18px; /* 角の丸みも整数に */
+  overflow-y: auto;
+  border: 4.5px solid;
+  border-color: #d6e6dc;
+  /* align-items: center; */
+  margin-top: 2rem;
+}
+
+.cainz-logo-yohaku {
+  width: 88px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.h3-cainz-points-gift {
+  font-weight: 600;
+  color: #327454;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.h4-cainz-points-gift {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 170%;
+  text-align: left;
+  margin: 32px 0 12px 0;
+}
+
+.h5-cainz-points-gift {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cainz-points-gift-sc-text {
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 200%;
+  text-align: left;
+  margin: 0.2rem 0 0.5rem 0;
+}
+
+.cainz-points-gift-sc-text-contact {
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 200%;
+  text-align: left;
+  margin-top: -10px;
+}
+
+/* カインズカード番号の連携ステップ */
+.cainz-card-step-image {
+  width: 84px;
+  margin: 2.7rem 0 1rem;
+}
+.cainz-card-step-container {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #F2F5F3;
+  box-shadow: 0px 0px 4.5px rgba(50, 116, 84, 0.25);
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.cainz-card-step-container p {
+  font-size: 16px;
+  text-align: left;
+}
+
+.cainz-card-step-container img {
+  border: 0.75px solid #BBBBBB;
+}
+
+.cainz-online-membership-button {
+  width: 100%;
+  padding: 24px 0;
+  background: white;
+  box-shadow: 0px 0px 4.5px rgba(50, 116, 84, 0.5);
+  border-radius: 8px;
+  border: 2px solid #327454;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cainz-button-onlinetext {
+  color: #327454;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cainz-card-membership-copy-button {
+  width: 100%;
+  padding: 24px 32px;
+  box-sizing: border-box;
+  background: #327454;
+  box-shadow: 0px 0px 4.5px rgba(50, 116, 84, 0.50);
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -32px;
+}
+
+.cainz-button-copy {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* カインズカード番号と名前入力 */
+.input-cainz-card-number-alignment-container {
+  border-radius: 8px;
+  background-color: #f2f5f3;
+  padding: 24px;
+  text-align: left;
+  font-size: 18px;
+  margin: 2rem 0;
+}
+
+.cainz-katakana {
+  font-size: 16px;
+  color: #000;
+  margin-top: 8px;
+}
+
+.cainz-card-number-alignment-styled-input {
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 4px solid #327454;
+  box-sizing: border-box;
+  height: 72px;
+  padding: 24px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #000;
+  margin: 0.5rem 0;
+}
+
+.cainz-card-number-alignment-styled-input:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+.cainz-card-number-alignment-styled-input::placeholder {
+  color: #808080;
+}
+
+/* 自動補完時の背景色を白に設定 */
+.cainz-card-number-alignment-styled-input:-webkit-autofill {
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px white inset;
+}
+
+/* 同意文章とチェックボックス */
+.cainz-personal-information-consent {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  border-radius: 8px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cainz-card-number-about {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 4px;
+}
+
+.cainz-card-number-about-description {
+  font-size: 10px;
+  line-height: 15px;
+}
+
+.cainz-personal-info-consent {
+  width: 100%;
+  height: 160px;
+  overflow-y: scroll;
+  padding: 24px;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 16px;
+  border: 4px solid #d5d5d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 16px;
+}
+
+.cainz-privacy-policy {
+  font-size: 12px;
+}
+
+.cainz-privacy-policy-agreement-text {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+#cainz-link-green a {
+  text-decoration: underline;
+  color: #327454;
+  font-size: 12px;
+}
+
+.cainz-privacy-policy .cainz-link-glay a {
+  text-decoration: underline;
+  color: #686868;
+  font-size: 12px;
+}
+
+/* チェックボックスの位置 */
+.cainz-privacy-checkbox-wrapper {
+  margin: 0 auto;
+}
+
+/* チェックボックス */
+.cainz-privacy-checkbox-wrapper .control {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* チェックボックスデフォルト */
+.cainz-privacy-checkbox-wrapper .control__indicator {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-right: 16px;
+  border-radius: 2px; border: 2px #686868 solid;
+}
+
+.cainz-privacy-checkbox-wrapper .control input:checked ~ .control__indicator {
+  background: #327454;
+  border-radius: 2px; border: 2px #327454 solid;
+}
+
+.cainz-privacy-checkbox-wrapper .control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.cainz-privacy-checkbox-wrapper .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+
+.cainz-privacy-checkbox-wrapper .control--checkbox .control__indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+/* 非アクティブ状態のボタン (disabled属性あり) */
+.cainz-privacy-policy-agreement-button[disabled] {
+  width: 100%;
+  padding: 24px 32px;
+  background: #B5B5B5; /* 非アクティブ時の背景色 */
+  border-radius: 8px;
+  border: 2px #B5B5B5 solid; /* 同じ幅のborderを適用 */
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: not-allowed;
+  box-shadow: none; /* シャドウを非アクティブ状態では無効に */
+}
+
+/* アクティブ状態のボタン (disabled属性がない) */
+.cainz-privacy-policy-agreement-button:not([disabled]) {
+  width: 100%;
+  padding: 24px 32px;
+  background: #327454; /* アクティブ時の背景色 */
+  box-shadow: 0px 0px 4px rgba(50, 116, 84, 0.50); /* アクティブ時のシャドウ */
+  border-radius: 8px;
+  border: 2px #327454 solid; /* 同じ幅のborderを適用 */
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* フローティングボックス右下に固定 */
+.cainz_numberlinkage_parent {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #327454;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Hiragino Sans';
+  z-index: 9999;
+  transition: opacity 0.3s ease, display 0s ease 0.3s;
+}
+
+/* 緑のボタン */
+.cainz_numberlinkage_green_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px;
+  background-color: #327454;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(50, 116, 84, 0.5);
+  position: relative; /* バツボタンを絶対位置で配置するために相対位置に */
+}
+
+/* バツボタン（黒丸背景とバツマーク） */
+.cainz_numberlinkage_close-icon {
+  position: absolute;
+  top: -10px; /* 上に10pxはみ出す */
+  right: -10px; /* 右に10pxはみ出す */
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* バツのスタイル */
+.cainz_numberlinkage_close-icon::before, .cainz_numberlinkage_close-icon::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: white;
+  transform-origin: center;
+}
+
+/* バツの左下から右上への線 */
+.cainz_numberlinkage_close-icon::before {
+  transform: rotate(45deg);
+}
+
+/* バツの右下から左上への線 */
+.cainz_numberlinkage_close-icon::after {
+  transform: rotate(-45deg);
+}
+/* フローティングボックス右下に固定ここまで */
+
+/* 見直す */
+/* 初期設定では両方の画像を非表示にする */
+.pc-image,
+.sp-image {
+    display: none;
+}
+/* 画面幅が600px以上の場合はパソコン用画像を表示 */
+@media screen and (min-width: 600px) {
+    .pc-image {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 599px) {
+    .sp-image {
+        display: block;
+    }
+    .pc-cainz-container {
+      width: 100%;
+    }
+
+    .pc-cainz-container-gap {
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .cainz-starterset-contents-productname {
+      display: block;
+    }
+
+    .h2-cainz {
+      font-weight: bold;
+      color: #266646;
+      font-size: 18px;
+      text-align: center;
+      line-height: 160%;
+      display: flex;
+      max-width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 0;
+      border: 2px solid #327454;
+      border-left: none;
+      border-right: none;
+    }
+
+    .starterset-h3 {
+      align-self: stretch;
+      text-align: center;
+      color: #327454;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .cainz-attention {
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+      background: #FEFFE4;
+      border-radius: 8px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .cainz-icon-attention-text-red {
+      flex: 1 1 0;
+      color: #E30000;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 150%;
+      text-align: left;
+    }
+
+    /* .br-sp {
+      display: block;
+    }
+
+    .br-pc {
+      display: block;
+    } */
+
+    .cainz-points-gift-sc {
+      padding: 14px;
+    }
+
+    .cainz-card-step-image {
+      width: 64px;
+      margin: 1.75rem 0 1rem;
+    }
+
+    .cainz-card-step-container {
+      padding: 16px 8px;
+    }
+
+    .cainz-card-membership-copy-button {
+      padding: 16px;
+    }
+
+    .cainz-card-step-container .sp-copy-cainz {
+      font-size: 16px;
+      line-height: 160%;
+      text-align: center;
+    }
+
+    .input-cainz-card-number-alignment-container {
+      padding: 16px;
+      margin: 1.5rem 0;
+    }
+
+    .cainz-personal-information-consent {
+      padding: 16px;
+      gap: 16px;
+    }
+
+    /* フローティングボックス右下に固定スマホ */
+    .cainz_numberlinkage_parent {
+      width: 160px;
+      background-color: #327454;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    /* 緑のボタン */
+    .cainz_numberlinkage_green_wrapper {
+      padding: 8px;
+    }
+
+    /* バツボタン（黒丸背景とバツマーク） */
+    .cainz_numberlinkage_close-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .benefits_tabs_container label {
+      font-size: 13px;
+      letter-spacing: -0.5px;
+    }
+
+    .benefits_tabs_container label {
+      width: 25%;
+      background-color: #D9D4C8;
+      margin: 0 8px 8px 0;
+      border-radius: 32px;
+      padding: 8px;
+      color: #AFA896;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 130%;
+      height: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .h3-cainz-points-gift {
+      font-weight: 600;
+      color: #327454;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+    
+    .h4-cainz-points-gift {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 170%;
+      text-align: left;
+      margin: 32px 0 12px 0;
+    }
+    
+    .h5-cainz-points-gift {
+      font-weight: 600;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .cainz-personal-info-consent {
+      padding: 14px;
+    }
+}
